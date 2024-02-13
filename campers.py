@@ -32,4 +32,5 @@ def registroCampers():
     
     
     
+print("Hola mundo")
 registroCampers()        
