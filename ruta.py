@@ -1,20 +1,19 @@
 import json 
-
-
-
+import jsonsfunciones
 #Crear un nuevo tema
 
 def CrearTema():
-    listaTemas=CargarDatos("campers.json")
+    listaTemas=jsonsfunciones.CargarDatos("rutas.json")
     try:
-        opcion=int(input("Que deseas cambiar?\n1.)Obligatorios\n2.)SGBD(Bases de datos)\n3.)Backend\n"))
+        opcion=int(input("Que deseas cambiar?\n1.Fundamentos de programacion\n2.)Programacion web\n3.)Programacion formal\n4.)SGBD(Bases de datos)\n5.)Backend\n0.)Para salir\n"))
         while True:
             if opcion==1:
-                obligatorios=input("Escribe tus obligatorios\n")
-                listaTemas.append({'obligatorios': obligatorios})
-                guardarcambios(listaTemas)
-                print("Tema creado con exito")
-                break   
+                Fundamentos_de_programacion=input("Escribe el nuevo fundamento\n")
+                listafundamentos=listaTemas['Fundamentos de programacion']
+                listafundamentos.append(Fundamentos_de_programacion)
+                jsonsfunciones.guardarcambios(listafundamentos)
+                print (listaTemas)
+                break
             elif opcion==2:
                 SGBD=input("Escribe tus SGBD\n")
                 listaTemas.append({'SGBD': SGBD})
@@ -29,7 +28,7 @@ def CrearTema():
                 break
             else:
                 print("No elegiste una opción correcta, intentalo de nuevo")
-    except exception:
+    except Exception:
         print("No escribiste un valor numerico intentalo de nuvo")
 
 #Crear una nueva ruta
