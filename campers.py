@@ -10,7 +10,7 @@ def guardarcambios(datos):
 def CargarDatos(): 
     try:   
         with open('campers.json','r') as Campers:
-            data = json.load(Campers,indent=4)
+            data = json.load(Campers)
     except (FileNotFoundError, json.decoder.JSONDecodeError):
         data = []
     return data
