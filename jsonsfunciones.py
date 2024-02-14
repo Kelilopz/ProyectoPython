@@ -1,8 +1,10 @@
+import json
+
 #Escribir al Json                
 def guardarcambios(datos,archivo):
-    with open('rutas.json','w') as archivo:
-        escritura = json.dumps(datos,ident=4)
-        archivo.write(escritura)
+    with open(archivo,'w') as archivonew:
+        escritura = json.dumps(datos , indent = 4)
+        archivonew.write(escritura)
     
 
 #Leer al Json

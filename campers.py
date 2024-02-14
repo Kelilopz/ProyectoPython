@@ -4,7 +4,7 @@ import jsonsfunciones
 #Funcion para ingresar campers
 
 def registroCampers():
-    ListaCampers=list(CargarDatos("campers.json"))   
+    ListaCampers=jsonsfunciones.CargarDatos("campers.json")
     while True:
         try:
             nombre=input("Escribe tu solo tus nombres\n")
@@ -17,7 +17,7 @@ def registroCampers():
             Riesgo="Bajo"
             Ruta=None
             ListaCampers.append({'nombre': nombre, 'apellidos': apellidos, 'documento':documento,'direccion': direccion, 'Acudiente': Acudiente, 'Telefono': Telefono, 'Estado':Estado, 'Riesgo':Riesgo,'Ruta':Ruta})
-            guardarcambios(ListaCampers,"campers.json")
+            jsonsfunciones.guardarcambios(ListaCampers,"campers.json")
             print("Usuario creado con exito")
             break
         except ValueError:
