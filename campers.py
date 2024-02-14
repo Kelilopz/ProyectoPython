@@ -1,24 +1,10 @@
-import json 
-#Escribir al Json                
-def guardarcambios(datos):
-    with open('campers.json','w') as archivo:
-        escritura = json.dumps(datos)
-        archivo.write(escritura)
-    
-
-#Leer al Json
-def CargarDatos(): 
-    try:   
-        with open('campers.json','r') as Campers:
-            data = json.load(Campers)
-    except (FileNotFoundError, json.decoder.JSONDecodeError):
-        data = []
-    return data
+import json
+import jsonsfunciones
 
 #Funcion para ingresar campers
 
 def registroCampers():
-    ListaCampers=list(CargarDatos())   
+    ListaCampers=list(CargarDatos("campers.json"))   
     while True:
         try:
             nombre=input("Escribe tu solo tus nombres\n")
@@ -31,7 +17,7 @@ def registroCampers():
             Riesgo="Bajo"
             Ruta=None
             ListaCampers.append({'nombre': nombre, 'apellidos': apellidos, 'documento':documento,'direccion': direccion, 'Acudiente': Acudiente, 'Telefono': Telefono, 'Estado':Estado, 'Riesgo':Riesgo,'Ruta':Ruta})
-            guardarcambios(ListaCampers)
+            guardarcambios(ListaCampers,"campers.json")
             print("Usuario creado con exito")
             break
         except ValueError:

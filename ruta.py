@@ -1,25 +1,11 @@
 import json 
-#Escribir al Json                
-def guardarcambios(rutas):
-    with open('rutas.json','w') as archivo:
-        escritura = json.dumps(rutas)
-        archivo.write(escritura)
-    
 
-#Leer al Json
-def CargarDatos(): 
-    try:   
-        with open('rutas.json','r') as RutasNew:
-            Rutas = json.load(RutasNew)
-    except (FileNotFoundError, json.decoder.JSONDecodeError):
-        Rutas = []
-    return Rutas
 
 
 #Crear un nuevo tema
 
 def CrearTema():
-    listaTemas=CargarDatos()
+    listaTemas=CargarDatos("campers.json")
     try:
         opcion=int(input("Que deseas cambiar?\n1.)Obligatorios\n2.)SGBD(Bases de datos)\n3.)Backend\n"))
         while True:
@@ -38,7 +24,7 @@ def CrearTema():
             elif opcion==3:
                 Backend=input("Escribe tus Backend\n")
                 listaTemas.append({'Backend': Backend})
-                guardarcambios(listaTemas)
+                guardarcambios(listaTemas,"campers.json")
                 print("Tema creado con exito")
                 break
             else:
