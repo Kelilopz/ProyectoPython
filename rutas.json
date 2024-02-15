@@ -1,21 +1,28 @@
 {
     "fundamentosProgramacion": [
-        "kellycitaBebe",
-        "andresito",
         "Introduccion a la algoritmia",
-        "Introduccion a la algoritmia",
-        "kelly",
-        "kelly",
-        "kelly",
-        "kelly",
-        "kelly",
-        "kelly"
+        "pseint",
+        "python"
     ],
     "Programacionweb": [
-        "holiwis",
-        "\"HTML\""
+        "html",
+        "css",
+        "bootstrap"
     ],
-    "ProgramacionFormal": [],
-    "SGBD": [],
-    "Backend": []
+    "ProgramacionFormal": [
+        "java",
+        "javascript",
+        "c#"
+    ],
+    "SGBD": [
+        "mysql",
+        "mongodb",
+        "postgresql"
+    ],
+    "Backend": [
+        "netcore",
+        "spring boot",
+        "nodejs",
+        "express"
+    ]
 }
