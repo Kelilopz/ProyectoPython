@@ -1,0 +1,27 @@
+[
+    {
+        "Nombre": "kelly",
+        "Fundamentos": [
+            "Introduccion a la algoritmia",
+            "pseint",
+            "python"
+        ],
+        "ProgramacionWeb": [
+            "html",
+            "css",
+            "bootstrap"
+        ],
+        "ProgramacionFormal": [
+            "java",
+            "javascript",
+            "c#"
+        ],
+        "SGBD": [
+            "postgresql",
+            "mongodb"
+        ],
+        "Backend": [
+            "express"
+        ]
+    }
+]

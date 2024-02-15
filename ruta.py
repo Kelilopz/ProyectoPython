@@ -63,18 +63,63 @@ def CrearTema():
 def CrearRuta():
     lista_rutas = jsonsfunciones.CargarDatos("rutasaprendizaje.json")
     listaTemas = jsonsfunciones.CargarDatos("rutas.json")
-    try:
-        nombreruta = input("Por favor escribe el nombre de la nueva ruta\n")
-        while True:
-            print("Los temas que todas las rutas deben ver son los siguientes\n")
-            print("Fundamentos de programación", listaTemas['fundamentosProgramacion'])
-            print("Programación Web", listaTemas['Programacionweb'])
-            print("Programación Formal", listaTemas['ProgramacionFormal'])
-            print("Elige un SGDB de los que se encuentran a continuación")
-            for x in listaTemas['SGBD']:  # Aquí se corrige 'SGDB' a 'SGBD'
-                print(x)
-            break 
-    except Exception:
-        print("Los datos ingresados no corresponden a un número")
 
+    while True:
+        
+        Fundamentos=listaTemas['fundamentosProgramacion']
+        ProgramacionWeb=listaTemas['Programacionweb']
+        ProgramacionFormal=listaTemas['ProgramacionFormal']
+        SGBD=[]
+        Backend=[]
+        try:
+            nombreruta = input("Por favor escribe el nombre de la nueva ruta\n")
+            print("Los temas que todas las rutas deben ver son los siguientes\n")
+            print("Fundamentos de programación = ", listaTemas['fundamentosProgramacion'])
+            print("Programación Web            = ", listaTemas['Programacionweb'])
+            print("Programación Formal         = ", listaTemas['ProgramacionFormal'])
+            print("Elige un SGDB de los que se encuentran a continuación\n")
+            cont=0
+            for x in listaTemas['SGBD']:  
+                print(cont," -> ",x)
+                cont+=1
+                     
+            while True:    
+                sgbdprincipal=int(input("inserta el numero del SBDB que deseas elegir como PRINCIPAL\n"))
+                if sgbdprincipal < 0 or sgbdprincipal >= cont:
+                    print("Por favor, elige un número válido dentro del rango.")
+                else:
+                    SGBD.append(listaTemas['SGBD'][sgbdprincipal])
+                    break
+                
+            while True:
+                sgbdsecundario = int(input("Inserta el número del SSDB que deseas elegir como SECUNDARIO\n"))
+                if sgbdsecundario < 0 or sgbdsecundario >= cont:
+                    print("Por favor, elige un número válido dentro del rango.")
+                elif sgbdprincipal == sgbdsecundario:
+                    print("No puedes elegir el mismo valor para los dos sgbd.")
+                else:
+                    SGBD.append(listaTemas['SGBD'][sgbdsecundario])
+                    break
+            
+            print("Elige un valor para el backend de los que se presentan a continuación\n")            
+            contador=0
+            for x in listaTemas['Backend']:  
+                print(contador," -> ",x) 
+                contador+=1
+            
+            while True:
+                backend=int(input("Inserta el numero del backend que deseas elegir\n"))
+                if backend < 0 or backend >= contador:
+                    print("Por favor, elige un número válido dentro del rango.")
+                else:
+                    Backend.append(listaTemas['Backend'][backend])
+                break        
+        except Exception:
+            print("Los datos ingresados no corresponden a un número")
+            
+        lista_rutas.append({'Nombre':nombreruta,'Fundamentos':Fundamentos,'ProgramacionWeb':ProgramacionWeb,'ProgramacionFormal':ProgramacionFormal,'SGBD':SGBD,'Backend':Backend}) 
+        jsonsfunciones.guardarcambios(lista_rutas,"rutasaprendizaje.json")
+        print(lista_rutas)
+
+    
 CrearRuta()
