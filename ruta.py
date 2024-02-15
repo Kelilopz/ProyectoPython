@@ -11,12 +11,14 @@ def CrearTema():
                 Fundamentos_de_programacion=input("Escribe el nuevo fundamento\n")
                 listaTemas['fundamentosProgramacion'].append(Fundamentos_de_programacion)
                 jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
+                print("Tema añadido con Exito ")
                 print (listaTemas)
                 break
             elif opcion==2:
                 ProgramacionWeb=input("Escribe el nuevo tema de programación Web\n")
                 listaTemas['Programacionweb'].append(ProgramacionWeb)
                 jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
+                print("Tema añadido con Exito ")
                 print (listaTemas)
                 break
                 
@@ -24,18 +26,21 @@ def CrearTema():
                 ProgramacionFormal=input("Escribe el nuevo tema de programación Formal\n")
                 listaTemas['ProgramacionFormal'].append(ProgramacionFormal)
                 jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
+                print("Tema añadido con Exito ")
                 print (listaTemas)
                 break
             elif opcion==4:
                 SGBD=input("Escribe el nuevo tus SGBD\n")
                 listaTemas['SGBD'].append(SGBD)
                 jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
+                print("Tema añadido con Exito ")
                 print (listaTemas)
                 break
             elif opcion==5:
                 Backend=input("Escribe tus Backend\n")
                 listaTemas['Backend'].append(Backend)
                 jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
+                
                 print (listaTemas)
                 break
             elif opcion==0:
@@ -46,14 +51,14 @@ def CrearTema():
         print("No escribiste un valor numerico intentalo de nuevo")
 
 #Crear una nueva ruta
-def CrearRuta():
-    lista_rutas=jsonsfunciones.CargarDatos())
-    nombreruta=input("Por favor escribe el nomobre de la nueva ruta")
+#def CrearRuta():
+#    lista_rutas=jsonsfunciones.CargarDatos()
+#    nombreruta=input("Por favor escribe el nomobre de la nueva ruta")
     
-    while True:
-       try:
-           SGDB_principal=(int(input(
-               "Por favor elige la Base de datos que deseas seleccionar principal"
-                                     lista_SGBD)))
+#    while True:
+#       try:
+#           SGDB_principal=(int(input(
+#               "Por favor elige la Base de datos que deseas seleccionar principal"
+#                                     lista_SGBD)))
             
 CrearTema()
