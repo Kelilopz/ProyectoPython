@@ -9,11 +9,16 @@ def CrearTema():
         while True:
             if opcion==1:
                 Fundamentos_de_programacion=input("Escribe el nuevo fundamento\n")
-                listaTemas['fundamentosProgramacion'].append(Fundamentos_de_programacion)
-                jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
-                print("Tema añadido con Exito ")
-                print (listaTemas)
-                break
+                for x in listaTemas['fundamentosProgramacion']:
+                    if Fundamentos_de_programacion.lower==x:
+                        print("El tema ya se encuentra registrado")
+                        break
+                    else:
+                        listaTemas['fundamentosProgramacion'].append(Fundamentos_de_programacion)
+                        jsonsfunciones.guardarcambios(listaTemas,"rutas.json")
+                        print("Tema añadido con Exito ")
+                        print (listaTemas)
+                        break
             elif opcion==2:
                 ProgramacionWeb=input("Escribe el nuevo tema de programación Web\n")
                 listaTemas['Programacionweb'].append(ProgramacionWeb)
