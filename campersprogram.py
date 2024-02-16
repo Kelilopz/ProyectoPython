@@ -7,7 +7,7 @@ def registroCampers():
     ListaCampers=jsonsfunciones.CargarDatos("campers.json")
     while True:
         try:
-            nombre=input("Escribe tu solo tus nombres\n")
+            nombre=input("Escribe solo tus nombres\n")
             apellidos=input("Escribe tus apellidos\n")
             documento=int(input("Por favor escribe tu documento de identidad\n"))
             direccion=input("Escribe tu dirección de residencia\n") 

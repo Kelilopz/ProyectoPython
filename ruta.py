@@ -6,7 +6,7 @@ def CrearTema():
     listaTemas=jsonsfunciones.CargarDatos("rutas.json")
     try:
         while True:
-            opcion=int(input("Que deseas cambiar?\n1.)Fundamentos de programacion\n2.)Programacion web\n3.)Programacion formal\n4.)SGBD(Bases de datos)\n5.)Backend\n0.)Para salir\n"))
+            opcion=int(input("Que deseas añadir?\n1.)Fundamentos de programacion\n2.)Programacion web\n3.)Programacion formal\n4.)SGBD(Bases de datos)\n5.)Backend\n0.)Para salir\n"))
             if opcion==1:
                 Fundamentos_de_programacion=input("Escribe el nuevo fundamento\n")
                 if any(Fundamentos_de_programacion == x for x in listaTemas['fundamentosProgramacion']):
@@ -113,13 +113,11 @@ def CrearRuta():
                     print("Por favor, elige un número válido dentro del rango.")
                 else:
                     Backend.append(listaTemas['Backend'][backend])
-                break        
+                break
+            lista_rutas.append({'Nombre':nombreruta,'Fundamentos':Fundamentos,'ProgramacionWeb':ProgramacionWeb,'ProgramacionFormal':ProgramacionFormal,'SGBD':SGBD,'Backend':Backend}) 
+            jsonsfunciones.guardarcambios(lista_rutas,"rutasaprendizaje.json")
+            print(lista_rutas)
+            break            
         except Exception:
             print("Los datos ingresados no corresponden a un número")
-            
-        lista_rutas.append({'Nombre':nombreruta,'Fundamentos':Fundamentos,'ProgramacionWeb':ProgramacionWeb,'ProgramacionFormal':ProgramacionFormal,'SGBD':SGBD,'Backend':Backend}) 
-        jsonsfunciones.guardarcambios(lista_rutas,"rutasaprendizaje.json")
-        print(lista_rutas)
-
-    
-CrearRuta()
+        

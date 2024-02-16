@@ -1,6 +1,6 @@
 [
     {
-        "Nombre": "kelly",
+        "Nombre": "Ruta NodeJS",
         "Fundamentos": [
             "Introduccion a la algoritmia",
             "pseint",
@@ -17,8 +17,83 @@
             "c#"
         ],
         "SGBD": [
-            "postgresql",
+            "mysql",
             "mongodb"
+        ],
+        "Backend": [
+            "nodejs"
+        ]
+    },
+    {
+        "Nombre": "Ruta Java",
+        "Fundamentos": [
+            "Introduccion a la algoritmia",
+            "pseint",
+            "python"
+        ],
+        "ProgramacionWeb": [
+            "html",
+            "css",
+            "bootstrap"
+        ],
+        "ProgramacionFormal": [
+            "java",
+            "javascript",
+            "c#"
+        ],
+        "SGBD": [
+            "mysql",
+            "postgresql"
+        ],
+        "Backend": [
+            "spring boot"
+        ]
+    },
+    {
+        "Nombre": "Ruta NetCore",
+        "Fundamentos": [
+            "Introduccion a la algoritmia",
+            "pseint",
+            "python"
+        ],
+        "ProgramacionWeb": [
+            "html",
+            "css",
+            "bootstrap"
+        ],
+        "ProgramacionFormal": [
+            "java",
+            "javascript",
+            "c#"
+        ],
+        "SGBD": [
+            "mongodb",
+            "postgresql"
+        ],
+        "Backend": [
+            "netcore"
+        ]
+    },
+    {
+        "Nombre": "Ruta Bancolombia",
+        "Fundamentos": [
+            "Introduccion a la algoritmia",
+            "pseint",
+            "python"
+        ],
+        "ProgramacionWeb": [
+            "html",
+            "css",
+            "bootstrap"
+        ],
+        "ProgramacionFormal": [
+            "java",
+            "javascript",
+            "c#"
+        ],
+        "SGBD": [
+            "mysql",
+            "postgresql"
         ],
         "Backend": [
             "express"
