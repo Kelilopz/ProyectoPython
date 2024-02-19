@@ -156,7 +156,7 @@ def asignarsalon():
            print("Proceso interrumpido, ingresa una de las opciones mostradas")
         
                
-def notamodulo1():
+def notamodulo():
     listaEstudiantes=jsonsfunciones.CargarDatos("campers.json")
     for index,camper in enumerate(listaEstudiantes):
         nombre=camper.get('nombre','No hay nombre')
@@ -164,15 +164,28 @@ def notamodulo1():
         if camper['Estado'] == "Cursando" :
             print(f"{index+1}-{nombre}{apellido}")
     opcionestudiante=int(input("Elige el numero del estudiante al cual le asignaras una calificación:  "))
-    print("Para asignar la nota del modulo funciones")
+    
+    print("Para asignar la nota del modulo necesitamos")
     notafinalmodulo()
-    cont=0
-    for x in listaEstudiantes[opcionestudiante-1]['notas']:
-        cont+=1
-        if x==None:
-            print("Se asignará la nota al modulo No", cont)
+    
+    #Para identificar las notas del estudiante que seleccionamos arriba
+    notasEstudianteSelec=listaEstudiantes[opcionestudiante-1]['Notas']
+    #Para mostrar las notas de los modulos anteriores
+    print("\n Modulos anteriores y nota sobtenidas")
+    for modulo, nota in notasEstudianteSelec.items():
+        if nota is not None:
+            print(f"-{modulo}:{nota}")
             
+    #Para asignar una nueva nota al los modulos 
+ 
+    for x in notasEstudianteSelec:
+        if notasEstudianteSelec[x] is None:
+            notasEstudianteSelec[x]=notafinalmodulo
+            print("La nota fue asignada exitosamente en el modulo:  ", x)
+            break
+    
+    jsonsfunciones.guardarcambios(listaEstudiantes,"campers.json")
             
     
  
-notamodulo1()
+notamodulo()

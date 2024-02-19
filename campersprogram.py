@@ -17,7 +17,13 @@ def registroCampers():
             Riesgo=""
             Salon=""
             DatosSalon=""
-            Notas=[None,None,None,None,None]
+            Notas={
+                'Fundamentos de Programacion':None,
+                'Programacion Web':None,
+                'Programacion Formal':None,
+                'SGBD':None,
+                'Backend':None
+            }
             ListaCampers.append({'nombre': nombre, 'apellidos': apellidos, 'documento':documento,'direccion': direccion, 'Acudiente': Acudiente, 'Telefono': Telefono, 'Estado':Estado, 'Riesgo':Riesgo,'Salon':Salon,'datosSalon':DatosSalon,'Notas':Notas})
             jsonsfunciones.guardarcambios(ListaCampers,"campers.json")
             print("Usuario creado con exito")
