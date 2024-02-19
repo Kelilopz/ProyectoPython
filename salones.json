@@ -2,7 +2,7 @@
     "Sputnik1": {
         "Horario": "6 am to 10 am",
         "capacidad": 33,
-        "Ocupacion": 1,
+        "Ocupacion": 2,
         "ruta": "Ruta Java",
         "fechainicio": "03/02/2023",
         "Fechafin": "05/05/2023",
@@ -11,7 +11,7 @@
     "Sputnik2": {
         "Horario": "10 am to 2 pm",
         "capacidad": 33,
-        "Ocupacion": 1,
+        "Ocupacion": 2,
         "ruta": "Ruta Java",
         "fechainicio": "03/02/2023",
         "Fechafin": "05/05/2023",

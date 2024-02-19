@@ -166,7 +166,6 @@ def notamodulo():
     opcionestudiante=int(input("Elige el numero del estudiante al cual le asignaras una calificación:  "))
     
     print("Para asignar la nota del modulo necesitamos")
-    notafinalmodulo()
     
     #Para identificar las notas del estudiante que seleccionamos arriba
     notasEstudianteSelec=listaEstudiantes[opcionestudiante-1]['Notas']
@@ -180,12 +179,24 @@ def notamodulo():
  
     for x in notasEstudianteSelec:
         if notasEstudianteSelec[x] is None:
-            notasEstudianteSelec[x]=notafinalmodulo
+            nuevaNota=notafinalmodulo()
+            if nuevaNota<60:
+                listaEstudiantes[opcionestudiante-1]['Riesgo']="Alto"
+                print("El estudiante REPROBÓ este modulo")
+                reporte="Reprobado"
+            if nuevaNota>60:
+                listaEstudiantes[opcionestudiante-1]['Riesgo']="Bajo"
+                print("El estudiante APROBÓ este modulo")
+                reporte="Aprobado"
+            notasEstudianteSelec[x]=[nuevaNota,reporte]
+            
+                
             print("La nota fue asignada exitosamente en el modulo:  ", x)
             break
     
-    jsonsfunciones.guardarcambios(listaEstudiantes,"campers.json")
-            
     
- 
+    
+    jsonsfunciones.guardarcambios(listaEstudiantes,"campers.json")
+
+
 notamodulo()

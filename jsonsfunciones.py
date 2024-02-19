@@ -1,4 +1,5 @@
 import json
+import os
 
 #Escribir al Json                
 def guardarcambios(datos,archivo):
@@ -16,3 +17,10 @@ def CargarDatos(archivo):
             return respuesta
     except Exception:
         return []
+    
+def limpiar_terminal():
+    # Verifica si el sistema operativo es Windows
+    if os.name == 'nt':
+        _ = os.system('cls')  # Limpia la terminal en Windows
+    else:
+        _ = os.system('clear')  # Limpia la terminal en sistemas Unix (Linux, macOS)
