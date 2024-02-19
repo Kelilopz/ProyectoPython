@@ -7,7 +7,7 @@
         "Acudiente": "Carmen Amaya",
         "Telefono": 3052397584,
         "Estado": "Cursando",
-        "Riesgo": "",
+        "Riesgo": "Alto",
         "Salon": "Sputnik1",
         "datosSalon": {
             "Horario": "6 am to 10 am",
@@ -19,8 +19,14 @@
             "Trainer": "Kelly "
         },
         "Notas": {
-            "Fundamentos de Programacion": null,
-            "Programacion Web": null,
+            "Fundamentos de Programacion": [
+                80.0,
+                "Aprobado"
+            ],
+            "Programacion Web": [
+                24.0,
+                "Reprobado"
+            ],
             "Programacion Formal": null,
             "SGBD": null,
             "Backend": null
