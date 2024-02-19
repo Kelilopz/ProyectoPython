@@ -16,7 +16,7 @@
             "ruta": "Ruta Java",
             "fechainicio": "03/02/2023",
             "Fechafin": "05/05/2023",
-            "Trainer": "Kelly "
+            "Trainer": "Andres Jerez "
         },
         "Notas": {
             "Fundamentos de Programacion": [
@@ -40,7 +40,7 @@
         "Acudiente": "Felisa Ronderos",
         "Telefono": 3052288509,
         "Estado": "Cursando",
-        "Riesgo": "Alto",
+        "Riesgo": "Bajo",
         "Salon": "Sputnik2",
         "datosSalon": {
             "Horario": "10 am to 2 pm",
@@ -76,8 +76,27 @@
             "ruta": "Ruta Java",
             "fechainicio": "03/02/2023",
             "Fechafin": "05/05/2023",
-            "Trainer": "Kelly"
+            "Trainer": "Andres Jerez"
         },
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
+    },
+    {
+        "nombre": "Eder Andres",
+        "apellidos": "Castellanos Jerez",
+        "documento": 1005287963,
+        "direccion": "calle 20#22",
+        "Acudiente": "mamita",
+        "Telefono": 3112675058,
+        "Estado": "En proceso de ingreso",
+        "Riesgo": "",
+        "Salon": "",
+        "datosSalon": "",
         "Notas": {
             "Fundamentos de Programacion": null,
             "Programacion Web": null,

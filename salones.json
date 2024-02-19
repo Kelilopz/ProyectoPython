@@ -15,7 +15,7 @@
         "ruta": "Ruta Java",
         "fechainicio": "03/02/2023",
         "Fechafin": "05/05/2023",
-        "Trainer": "Kelly"
+        "Trainer": "Andres Jerez "
     },
     "Sputnik3": {
         "Horario": "2 am to 6 pm",
@@ -83,11 +83,11 @@
     "Apollo2": {
         "Horario": "10 am to 2 pm",
         "capacidad": 33,
-        "Ocupacion": 0,
-        "ruta": "",
-        "fechainicio": "",
-        "Fechafin": "",
-        "Trainer": ""
+        "Ocupacion": 2,
+        "ruta": "Ruta Java",
+        "fechainicio": "03/02/2023",
+        "Fechafin": "05/05/2023",
+        "Trainer": "Andres Jerez "
     },
     "Apollo3": {
         "Horario": "2 am to 6 pm",

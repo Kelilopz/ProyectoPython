@@ -18,7 +18,7 @@ def CargarDatos(archivo):
     except Exception:
         return []
     
-def limpiar_terminal():
+def limpiarTerminal():
     # Verifica si el sistema operativo es Windows
     if os.name == 'nt':
         _ = os.system('cls')  # Limpia la terminal en Windows
