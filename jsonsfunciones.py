@@ -5,6 +5,7 @@ def guardarcambios(datos,archivo):
     with open(archivo,'w') as archivonew:
         escritura = json.dumps(datos , indent = 4)
         archivonew.write(escritura)
+        print("Tus datos han sido guardados EXITOSAMENTE")
     
 
 #Leer al Json

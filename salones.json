@@ -1,0 +1,110 @@
+{
+    "Sputnik1": {
+        "Horario": "6 am to 10 am",
+        "capacidad": 33,
+        "Ocupacion": 1,
+        "ruta": "Ruta Java",
+        "fechainicio": "03/02/2023",
+        "Fechafin": "05/05/2023",
+        "Trainer": "Kelly "
+    },
+    "Sputnik2": {
+        "Horario": "10 am to 2 pm",
+        "capacidad": 33,
+        "Ocupacion": 1,
+        "ruta": "Ruta Java",
+        "fechainicio": "03/02/2023",
+        "Fechafin": "05/05/2023",
+        "Trainer": "Kelly"
+    },
+    "Sputnik3": {
+        "Horario": "2 am to 6 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Sputnik4": {
+        "Horario": "6 pm to 10 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Artemis1": {
+        "Horario": "6 am to 10 am",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Artemis2": {
+        "Horario": "10 am to 2 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Artemis3": {
+        "Horario": "2 am to 6 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Artemis4": {
+        "Horario": "6 pm to 10 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Apollo1": {
+        "Horario": "6 am to 10 am",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Apollo2": {
+        "Horario": "10 am to 2 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Apollo3": {
+        "Horario": "2 am to 6 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    },
+    "Apollo4": {
+        "Horario": "6 pm to 10 pm",
+        "capacidad": 33,
+        "Ocupacion": 0,
+        "ruta": "",
+        "fechainicio": "",
+        "Fechafin": "",
+        "Trainer": ""
+    }
+}

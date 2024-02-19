@@ -14,9 +14,11 @@ def registroCampers():
             Acudiente=input("Escribe el nombre de tu acudiente\n")
             Telefono=int(input("Escribe tu numero de celular\n")) 
             Estado="En proceso de ingreso"
-            Riesgo="Bajo"
-            Ruta=None
-            ListaCampers.append({'nombre': nombre, 'apellidos': apellidos, 'documento':documento,'direccion': direccion, 'Acudiente': Acudiente, 'Telefono': Telefono, 'Estado':Estado, 'Riesgo':Riesgo,'Ruta':Ruta})
+            Riesgo=""
+            Salon=""
+            DatosSalon=""
+            Notas=[None,None,None,None,None]
+            ListaCampers.append({'nombre': nombre, 'apellidos': apellidos, 'documento':documento,'direccion': direccion, 'Acudiente': Acudiente, 'Telefono': Telefono, 'Estado':Estado, 'Riesgo':Riesgo,'Salon':Salon,'datosSalon':DatosSalon,'Notas':Notas})
             jsonsfunciones.guardarcambios(ListaCampers,"campers.json")
             print("Usuario creado con exito")
             break
