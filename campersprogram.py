@@ -146,37 +146,41 @@ def campersYtrainersEnUnaRuta():
 def camperspormodulo():
     listaEstudiantes = jsonsfunciones.CargarDatos("campers.json")
     listaSalones = jsonsfunciones.CargarDatos("salones.json")
-    resultados = {}
-
-    
-    for camper in listaEstudiantes:
-        nombre=camper.get('nombre','No hay nombre')
-        apellido=camper.get('apellidos','No hay apellidos')
-        ruta=camper['datosSalon']['ruta']
-        trainerencargado=camper['datosSalon']['Trainer']
+    aprobados=0
+    reprobados=0
+    while True:
+        try:
+            print("\nPor favor elije el módulo que deseas revisar:")
+            print("1. Fundamentos de Programación")
+            print("2. Programación Web")
+            print("3. Programación Formal")
+            print("4. SGBD")
+            print("5. Backend")
+            print("0. Salir al menú anterior")
             
-
-        if ruta and trainerencargado:
-            resultados.setdefault(ruta, {})
-            resultados[ruta].setdefault(trainerencargado, {'Aprobados': 0, 'Perdidos': 0})
-
-            # Supongamos que tienes un campo en el JSON que indica si el camper aprobó o no el módulo
-            aprobado = camper.get('aprobado', False)
-
-            if aprobado:
-                resultados[ruta][trainerencargado]['Aprobados'] += 1
-            else:
-                resultados[ruta][trainerencargado]['Perdidos'] += 1
-
-    # Mostrar los resultados
-    print("Resultados de los campers por módulo, ruta y entrenador:")
-    for ruta, entrenadores in resultados.items():
-        print(f"Ruta de entrenamiento: {ruta}")
-        for entrenador, datos in entrenadores.items():
-            print(f"  Entrenador: {entrenador}")
-            print(f"    Campers aprobados: {datos['Aprobados']}")
-            print(f"    Campers perdidos: {datos['Perdidos']}")
-        print()
-
-# Llamar a la función para obtener y mostrar los resultados
+            opcion = int(input("Opción: "))
+            if opcion==0:
+                break
+            
+            for x in listaEstudiantes:
+                notas=x.get('Notas',{}) 
+                if notas and opcion in notas:     
+                    resultado=notas[opcion]
+                    if resultado[1]=="Aprobado":
+                        aprobados+=1
+                    elif resultado[1]=="Reprobado":
+                        reprobados+=1
+            print(f"\nMódulo seleccionado: {opcion}")
+            print(f"Campers que aprobaron: {aprobados}")
+            print(f"Campers que perdieron: {reprobados}")
+                                
+                           
+                #for index,camper in enumerate(listaEstudiantes):
+                #    nombre=camper.get('nombre','No hay nombre')
+                #    apellido=camper.get('apellidos','No hay apellidos')
+                #    
+                #    print(f"{index+1}-{nombre}")
+        except Exception:
+            print("Los datos ingresados no corresponden\nIntentalo de nuevo ")        
+        
 camperspormodulo()
