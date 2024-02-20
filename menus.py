@@ -143,7 +143,7 @@ def menuCoordinador():
                         campersprogram.campersYtrainersEnUnaRuta()
                     elif reporte==6:
                         jsonsfunciones.limpiarTerminal()
-                        campersprogram.camperspormodulo
+                        campersprogram.campersPorModulo
                     elif reporte==0:
                         jsonsfunciones.limpiarTerminal()
                         print("....Saliendo.....")
