@@ -181,4 +181,59 @@ def camperspormodulo():
         except ValueError:
             print("Los datos ingresados no corresponden. Inténtalo de nuevo.")        
             
-camperspormodulo()
+def campers_por_ruta_y_entrenador():
+    lista_estudiantes = jsonsfunciones.CargarDatos("campers.json")
+    lista_salones = jsonsfunciones.CargarDatos("salones.json")
+    
+    while True:
+        try:
+            print("\nPor favor elije el módulo que deseas revisar:")
+            print("1. Fundamentos de Programación")
+            print("2. Programación Web")
+            print("3. Programación Formal")
+            print("4. SGBD")
+            print("5. Backend")
+            print("6. Salir al menú anterior")
+            
+            opcion = int(input("Opción: "))
+            if opcion == 6:
+                break
+            if opcion < 6 and opcion > 0:
+                aprobados = {}
+                reprobados = {}
+                
+                for camper in lista_estudiantes:
+                    notas = camper.get('Notas', {})
+                    nombremodulo = list(notas.keys())[opcion - 1]
+                    notasdelmodulo = notas.get(nombremodulo)
+                    if notasdelmodulo is not None:
+                        estado = notasdelmodulo[1]
+                        
+                        # Obtener la ruta y el entrenador del camper
+                        ruta = camper.get('datosSalon', {}).get('ruta', 'Ruta desconocida')
+                        entrenador = camper.get('datosSalon', {}).get('Trainer', 'Entrenador desconocido')
+                        
+                        # Incrementar el contador correspondiente
+                        if estado == "Aprobado":
+                            aprobados[(ruta, entrenador)] = aprobados.get((ruta, entrenador), 0) + 1
+                        elif estado == "Reprobado":
+                            reprobados[(ruta, entrenador)] = reprobados.get((ruta, entrenador), 0) + 1
+                
+                print("\n---------------------------------------")            
+                print(f"-----------CAMPERS APROBADOS------------")
+                print(f" En el modulo {nombremodulo}")
+                print("-----------------------------------------") 
+                for key, value in aprobados.items():
+                    print(f"Ruta: {key[0]}\nEntrenador: {key[1]}\nAprobados: {value}")
+                
+                print("\n---------------------------------------")     
+                print(f"-----------CAMPERS REPROBADOS-----------")
+                print(f" En el modulo {nombremodulo}")
+                print("-----------------------------------------") 
+                for key, value in reprobados.items():
+                    print(f"Ruta: {key[0]}\nEntrenador: {key[1]}\nReprobados: {value}")
+                                    
+        except ValueError:
+            print("Los datos ingresados no corresponden\nIntentalo de nuevo ")        
+            
+campers_por_ruta_y_entrenador()
