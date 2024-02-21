@@ -7,7 +7,7 @@
         "Acudiente": "Carmen Amaya",
         "Telefono": 3052397584,
         "Estado": "Cursando",
-        "Riesgo": "Alto",
+        "Riesgo": "Bajo",
         "Salon": "Sputnik1",
         "datosSalon": {
             "Horario": "6 am to 10 am",
@@ -27,8 +27,14 @@
                 24.0,
                 "Reprobado"
             ],
-            "Programacion Formal": null,
-            "SGBD": null,
+            "Programacion Formal": [
+                73.9,
+                "Aprobado"
+            ],
+            "SGBD": [
+                77.4,
+                "Aprobado"
+            ],
             "Backend": null
         }
     },
@@ -93,6 +99,109 @@
         "direccion": "calle 20#22",
         "Acudiente": "mamita",
         "Telefono": 3112675058,
+        "Estado": "En proceso de ingreso",
+        "Riesgo": "",
+        "Salon": "",
+        "datosSalon": "",
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
+    },
+    {
+        "nombre": "Kelly Yojanna",
+        "apellidos": "L\u00f3pez Amaya",
+        "documento": 1005237626,
+        "direccion": "Diag 14c",
+        "Acudiente": "Mamita",
+        "Telefono": 3052288509,
+        "Estado": "En proceso de ingreso",
+        "Riesgo": "",
+        "Salon": "",
+        "datosSalon": "",
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
+    },
+    {
+        "nombre": "Alvaro Jose",
+        "apellidos": "Casanova Mendoza",
+        "documento": 123456,
+        "direccion": "diag 14c",
+        "Acudiente": "Cenaida",
+        "Telefono": 30522288559,
+        "Estado": "Cursando",
+        "Riesgo": "",
+        "Salon": "Apollo2",
+        "datosSalon": {
+            "Horario": "10 am to 2 pm",
+            "capacidad": 33,
+            "Ocupacion": 1,
+            "ruta": "Ruta Java",
+            "fechainicio": "03/02/2023",
+            "Fechafin": "05/05/2023",
+            "Trainer": "Andres Jerez "
+        },
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
+    },
+    {
+        "nombre": "Helena",
+        "apellidos": "Vazquez",
+        "documento": 234251231,
+        "direccion": "calle 11 ",
+        "Acudiente": "Helena",
+        "Telefono": 23423423,
+        "Estado": "En proceso de ingreso",
+        "Riesgo": "",
+        "Salon": "",
+        "datosSalon": "",
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
+    },
+    {
+        "nombre": "Juan Pablo",
+        "apellidos": "Lopez Amaua",
+        "documento": 34234234,
+        "direccion": "Diag 14c",
+        "Acudiente": "Mamita",
+        "Telefono": 23423423,
+        "Estado": "En proceso de ingreso",
+        "Riesgo": "",
+        "Salon": "",
+        "datosSalon": "",
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
+    },
+    {
+        "nombre": "Luisa Fernanda ",
+        "apellidos": "Chacon Amaya",
+        "documento": 1098,
+        "direccion": "barcelona",
+        "Acudiente": "mamita",
+        "Telefono": 302598752,
         "Estado": "En proceso de ingreso",
         "Riesgo": "",
         "Salon": "",

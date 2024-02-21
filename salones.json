@@ -83,7 +83,7 @@
     "Apollo2": {
         "Horario": "10 am to 2 pm",
         "capacidad": 33,
-        "Ocupacion": 2,
+        "Ocupacion": 1,
         "ruta": "Ruta Java",
         "fechainicio": "03/02/2023",
         "Fechafin": "05/05/2023",

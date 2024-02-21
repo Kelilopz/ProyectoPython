@@ -8,7 +8,7 @@ import trainer
 def menuCamper():
     while True:
         try:
-            jsonsfunciones.limpiarTerminal()
+           
             print("-------------------------------")
             print("-------Bienvenido Camper-------")
             print("-------------------------------") 
@@ -31,7 +31,7 @@ def menuCamper():
 def menuCoordinador():
     while True:
         try:
-            jsonsfunciones.limpiarTerminal()
+            
             print("-------------------------------------")
             print("-------Bienvenido Coordinardor-------")
             print("-------------------------------------") 
@@ -66,7 +66,7 @@ def menuCoordinador():
                     else:
                         print("Elie una de las opciones dadas anteriormente")
             elif opcion==2:
-                jsonsfunciones.limpiarTerminal()
+                
                 while True:
                     print("-------------------------------------")
                     print("-----------Modificar Rutas-----------")
@@ -93,7 +93,7 @@ def menuCoordinador():
                     else:
                         print("Elije una opción correcta, intentalo nuevamente")
             elif opcion==3:
-                jsonsfunciones.limpiarTerminal()
+                
                 while True:
                     print("-------------------------------------")
                     print("----------Registrar Trainer----------")
@@ -112,7 +112,7 @@ def menuCoordinador():
                     else:
                         print("Elije una opción correcta.")
             elif opcion==4:
-                jsonsfunciones.limpiarTerminal()
+                
                 while True:
                     print("-------------------------------------")
                     print("----------Modulo Reportes----------")
@@ -150,6 +150,7 @@ def menuCoordinador():
                         break
                     else:
                         print("Elije una de las opciones indicadas.")
+                    break    
             elif opcion==0:
                 jsonsfunciones.limpiarTerminal()
                 print("...Saliendo...")
@@ -162,7 +163,7 @@ def menuCoordinador():
 def menuTrainer():
     while True:
         try:
-            jsonsfunciones.limpiarTerminal()
+           
             print("-------------------------------------")
             print("---------Bienvenido Trainer----------")
             print("-------------------------------------") 
