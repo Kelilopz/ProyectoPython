@@ -213,5 +213,24 @@
             "SGBD": null,
             "Backend": null
         }
+    },
+    {
+        "nombre": "kelly ",
+        "apellidos": "lopez",
+        "documento": 234234,
+        "direccion": "alskdfjalsdkf",
+        "Acudiente": "lkdajkalsdkf",
+        "Telefono": 23423423,
+        "Estado": "En proceso de ingreso",
+        "Riesgo": "",
+        "Salon": "",
+        "datosSalon": "",
+        "Notas": {
+            "Fundamentos de Programacion": null,
+            "Programacion Web": null,
+            "Programacion Formal": null,
+            "SGBD": null,
+            "Backend": null
+        }
     }
 ]
